@@ -73,49 +73,26 @@ td{
   width: 1%; /* 列の幅を1%ずつに固定(全列同じ幅になる) */
 }
 
-
-
 /* =================================== */
-/* 多段レイアウト（横並び）用の設定
+/* 横並びレイアウト用の設定
 /* =================================== */
-
-/* 可変な幅を定義するCSS変数 (flex-width) */
-:root {
-  --fw: 1;
-}
-
-/* 中の要素を横並びにする基本クラス */
-.flex {
+.columns {
   display: flex;
-  gap: 1em; /* 要素間の隙間 */
+  gap: 1em;
 }
 
-/* Flexコンテナ内のアイテムを垂直方向(上下)に中央揃えする */
+/* 通常のカラム */
+.col {
+  flex: 1;
+}
+
+/* コンテンツを中央寄せにするクラス */
 .items-center {
-  align-items: center;
+  display: flex;
+  flex-direction: column; /* 要素を縦に並べる */
+  justify-content: center; /* 垂直方向の中央寄せ */
+  align-items: center;     /* 水平方向の中央寄せ */
 }
-
-/* space-around: 要素の周りに均等な余白を配置 */
-.sa {
-  justify-content: space-around;
-}
-
-/* space-between: 両端に寄せ、要素の間に均等な余白を配置 */
-.sb {
-  justify-content: space-between;
-}
-
-/* .sa, .sbクラス内のdiv要素に適用 */
-.sa div, .sb div {
-  margin: 0.1em;
-}
-
-/* .fwクラス内のdiv要素に適用 */
-.fw div {
-  /* var(--fw)の値に応じて幅を自動調整 (1なら均等分割) */
-  flex: var(--fw);
-}
-
 
 /* =================================== */
 /* ボックスデザイン

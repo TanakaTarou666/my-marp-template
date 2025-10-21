@@ -102,15 +102,20 @@ divなどのhtml表記内の中で数式を書くときは一行改行する
 
 # 追加の機能1 横並びのレイアウト
 
-<div class="flex sa items-center">
-    <div>
-        横並びで表示できる
+<div class="columns">
+    <div class="col">
+
+### 左のコンテンツ
+- 通常は左寄せ
     </div>
-    <div>
-       <figure class="center caption">
-            <img src="./img/sample.png" style="width: 300px; border: 1px solid black;" />
-            <figcaption>画像</figcaption>
-        </figure>
+    <div class="col items-center">
+
+### 右のコンテンツ
+items-center クラスを使うと<br>中央寄せになる
+<figure class="center caption">
+      <img src="./img/sample.png" style="width: 300px; border: 1px solid black;" />
+      <figcaption>画像</figcaption>
+      </figure>
     </div>
 </div>
 
@@ -127,11 +132,21 @@ divなどのhtml表記内の中で数式を書くときは一行改行する
 
 <div class="box">
   <div class="box-title">横並びレイアウト＋ブロック表示</div>
-  <div class="box-content flex sa items-center">
-    <p>合わせ技も可能</p>
-    <figure class="center caption">
-      <img src="./img/sample.png" style="width: 250px; border: 1px solid black;" />
-      <figcaption>画像</figcaption>
-    </figure>
+  <div class="box-content">
+    <div class="columns">
+        <div class="col items-center">
+            <ul>
+                <li>合わせ技も可能</li>
+                <li>中央寄せver</li>
+            </ul>
+        </div>
+        <div class="col items-center">
+            <figure class="center caption">
+            <img src="./img/sample.png" style="width: 250px; border: 1px solid black;" />
+            <figcaption>画像</figcaption>
+            </figure>
+        </div>
+    </div>
   </div>
 </div>
+
