@@ -1,0 +1,145 @@
+/* @theme custom-theme */
+
+/* * Marpの標準テーマ「default」を読み込み、
+ * これをベースとしてデザインを上書きします。
+ */
+@import 'default';
+
+
+/* =================================== */
+/* スライド全体の基本デザイン
+/* =================================== */
+
+/* スライドページ全体のスタイル */
+section {
+  font-size: 35px;     /* 基本の文字サイズ */
+  line-height: 1.2;    /* 行の高さ */
+  padding-top: 20px;   /* 上部の余白 */
+}
+
+/* h1見出し (一番大きいタイトル) */
+h1 {
+  font-size: 45px;
+  margin-bottom: 15px; /* 線とのスペースを確保するため調整 */
+  padding-bottom: 5px; /* テキストと線の間のスペース */
+  position: relative; /* ::afterの位置の基準にする */
+}
+
+h1::after {
+  content: ''; /* 必須: これがないと表示されない */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 108%; /* 親要素(h1)の幅いっぱいに広げる */
+  margin-left: -30pt;
+  height: 1px;
+  background-color: gray;
+}
+
+/* h2見出し (二番目のタイトル) */
+h2 {
+  font-size: 42px;
+}
+
+/* 中央揃え用の便利クラス (画像などに使用) */
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+/* 図のキャプション用スタイル */
+.caption {
+  font-size: 0.9em;
+  text-align: center; /* この行がテキストを中央揃えにします */
+}
+
+.flex figure {
+  margin: 0;
+}
+
+/* 表のスタイル */
+tr:first-child{
+  background-color: #d4f4d1ff; /* 1行の背景色 */
+}
+
+td:first-child {
+    background-color: #e6f3e6; /* 1列目の背景色 */
+}
+
+td{
+  text-align: center; /* セル内のテキストを中央揃え */
+  background-color: #f9f9f9; /* セルの背景色 */  
+  table-layout: fixed;
+  width: 1%; /* 列の幅を1%ずつに固定(全列同じ幅になる) */
+}
+
+
+
+/* =================================== */
+/* 多段レイアウト（横並び）用の設定
+/* =================================== */
+
+/* 可変な幅を定義するCSS変数 (flex-width) */
+:root {
+  --fw: 1;
+}
+
+/* 中の要素を横並びにする基本クラス */
+.flex {
+  display: flex;
+  gap: 1em; /* 要素間の隙間 */
+}
+
+/* Flexコンテナ内のアイテムを垂直方向(上下)に中央揃えする */
+.items-center {
+  align-items: center;
+}
+
+/* space-around: 要素の周りに均等な余白を配置 */
+.sa {
+  justify-content: space-around;
+}
+
+/* space-between: 両端に寄せ、要素の間に均等な余白を配置 */
+.sb {
+  justify-content: space-between;
+}
+
+/* .sa, .sbクラス内のdiv要素に適用 */
+.sa div, .sb div {
+  margin: 0.1em;
+}
+
+/* .fwクラス内のdiv要素に適用 */
+.fw div {
+  /* var(--fw)の値に応じて幅を自動調整 (1なら均等分割) */
+  flex: var(--fw);
+}
+
+
+/* =================================== */
+/* ボックスデザイン
+/* =================================== */
+/* ボックスのタイトル部分 */
+/* ボックス全体を囲むコンテナ */
+.box {
+  border-radius: 22px; /* 全体の角を丸くする */
+  overflow: hidden;     /* 中身が角からはみ出ないようにする */
+  box-shadow: 4px 4px 16px rgba(0,0,0,0.15); /* 全体に影をつける */
+  margin-bottom: 25px;  /* ボックス下の余白 */
+  width: 105%;           /* 横幅を広くする（必要に応じて調整） */
+  margin-left: -20pt;
+}
+
+/* タイトルバーのスタイル */
+.box-title {
+  background-color: #005824; /* 背景色 (濃い緑) */
+  color: white;              /* 文字色 (白) */
+  padding: 10px 20px;        /* 内側の余白 */
+}
+
+/* コンテンツエリアのスタイル */
+.box-content {
+  background-color: #e6f3e6; /* 背景色 (薄い緑) */
+  padding: 15px 20px;        /* 内側の余白 */
+}

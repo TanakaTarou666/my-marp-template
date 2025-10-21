@@ -1,0 +1,10 @@
+{
+    "markdown.marp.exportType": "pptx",
+    "markdown.marp.pptx.editable": "on",
+    "markdown.marp.themes": [
+        "https://raw.githubusercontent.com/kaisugi/marp-theme-academic/main/themes/academic.css",
+        "./custom.css"
+    ],
+    "markdown.marp.html": "all",
+    "markdown.marp.strictPathResolutionDuringExport": true,
+}
