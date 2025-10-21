@@ -11,9 +11,32 @@ theme: custom-theme
 
 ---
 
+# 画像
+
 <figure class="center caption">
-  <img src="./img/sample.png" style="width: 500px; border: 1px solid black;" />
+  <img src="./img/sample.png" style="width: 200px; border: 1px solid black;" />
   <figcaption>画像はcssを使用することで柔軟にカスタマイズできます</figcaption>
+</figure>
+
+<div style="display: flex; justify-content: space-around; align-items: flex-start; gap: 10px;">
+  <figure style="text-align: center;">
+    <img src="./img/sample.png" style="width: 200px; border: 1px solid black;" />
+    <figcaption>画像1</figcaption>
+  </figure>
+
+  <figure style="text-align: center;">
+    <img src="./img/sample.png" style="width: 200px; border: 1px solid black;" />
+    <figcaption>画像2</figcaption>
+  </figure>
+  
+  <figure style="text-align: center;">
+    <img src="./img/sample.png" style="width: 200px; border: 1px solid black;" />
+    <figcaption>画像3</figcaption>
+  </figure>
+</div>
+
+<figure class="center caption">
+横並びの画像表示例
 </figure>
 
 ---
@@ -36,7 +59,7 @@ $$
 \int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2} \\
 \end{align*}
 $$
-divなどのhtml表記内の中で，書くときは一行改行して書く
+divなどのhtml表記内の中で数式を書くときは一行改行する
 </div>
 
 ---
