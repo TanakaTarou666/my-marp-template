@@ -100,6 +100,17 @@ divなどのhtml表記内の中で数式を書くときは一行改行する
 
 ---
 
+# Mermaid
+
+<pre class="mermaid">
+graph TD
+    A[User] --> B{Database};
+    B --> C[Server];
+    C --> A;
+</pre>
+
+---
+
 # 追加の機能1 横並びのレイアウト
 
 <div class="columns">
