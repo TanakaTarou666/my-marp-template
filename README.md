@@ -73,9 +73,9 @@ powershellを開き，以下のコマンドでタイムアウトを大きくし�
     echo $env:PUPPETEER_TIMEOUT
     ```
 ### 3. Marp cliを入れる
-marp cliをインストールし，以下のコマンドでエクスポートする方法もあります．
-結構面倒かも．
+marp cli，日本語フォントをインストールし，以下のコマンドでエクスポートする方法もあります．
+若干面倒．
 ```bash
 marp main.md --pdf --theme-set custom.css --allow-local-files --html true
 ```
-[この辺を参考に](http://qiita.com/vpkaerun/items/ca8a26e92b8cc9b0cece)
+[marpのインストール](http://qiita.com/vpkaerun/items/ca8a26e92b8cc9b0cece)
