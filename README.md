@@ -79,3 +79,4 @@ marp cli，日本語フォントをインストールし，以下のコマンド
 marp main.md --pdf --theme-set custom.css --allow-local-files --html true
 ```
 [marpのインストール](http://qiita.com/vpkaerun/items/ca8a26e92b8cc9b0cece)
+[日本語フォントのインストール例](https://qiita.com/flat35hd99/items/f981b0088a608d6d7974)
